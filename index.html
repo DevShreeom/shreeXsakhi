@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> KOI KHAS!! 💝</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="loader-blur"></div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="1.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Hidden Button to Trigger Music Play -->
+  <button id="play-music" style="display: none;">Play Music</button>
+
+  <!-- Paper Divs -->
+  <div class="paper heart"></div>
+  
+  <div class="paper image">
+    <p>HAPPY BIRTHDAY! 💞</p>
+    <p>(return gift aapki pics 📷 😜)</p>
+    <img src="images/1.jpeg" />
+  </div>
+
+
+  <!-- Existing cards... -->
+
+<div class="paper image">
+  <p>😚 Aur ek manifestetaon ...</p>
+  <img src="images/4.jpg" />
+</div>
+
+<div class="paper image">
+  <div class="text-block">
+    <p>🩷 Teri woh hasi hayyy</p>
+    <p>Woh aankhein 👀 ;💘 Woh baatein...</p>
+    <p>💞 Aur woh sab kuch...</p>
+  </div>
+  <img src="images/5.jpg" />
+</div>
+
+<div class="paper image">
+  <p>📸 Bas tu... main... aur yeh moment 💫</p>
+  <img src="images/6.jpg" />
+</div>
+
+<div class="paper image">
+  <p>💕 Mujhe tu roz aur pasand aati ja rahi hai 👉👈</p>
+  <p>Koi bachao muzeee!!</p>
+  <img src="images/7.jpg" />
+</div>
+
+<!-- Add more below this in same format if needed -->
+
+  
+  <div class="paper image">
+    <p></p>
+    <img src="images/2.jpeg" />
+  </div>
+
+  <div class="paper image">
+    <p>🗣 Ahem Ahem</p>
+    <p>meri pyari bayko ko </p>
+    <img src="images/3.jpg" />
+  </div>
+
+  <div class="paper red">
+    <p class="p1">Filhal to kya hi gift du 😔</p>
+    <p class="p2">Lenkin ye vada he mera 👀</p>
+    <p class="p3">Ye SHREE is SAKHI ka sath nhi chodega 😏💕 </p>
+  </div>
+
+  <div class="paper">
+    <p class="p1">Jaise me aapka Pasandida mard</p>
+    <p class="p1">waise 🫵 aap meri pasandida aurat<span style="color: red !important;">💖</span></p>
+  </div>
+
+  <div class="paper">
+    <p class="p1">Chalo,ab Paper hatao Bbg 💗</p>
+    <p class="p1">(ek bar chu lo for song!!)</p>
+  </div>
+
+
+
+  <script src="./mobile.js"></script>
+
+  <script>
+    // Trigger autoplay music on first interaction via the hidden button
+    const bgMusic = document.getElementById('bg-music');
+    const playButton = document.getElementById('play-music');
+
+    // Automatically click the hidden button to play music on page load
+    playButton.addEventListener('click', () => {
+      bgMusic.play();
+      playButton.style.display = 'none';  // Hide the button after it starts the music
+    });
+
+    // Fallback to clicking on the page if needed
+    document.addEventListener('click', () => {
+      if (bgMusic.paused) {
+        playButton.click();  // Trigger the hidden button click if no other interaction
+      }
+    });
+  </script>
+</body>
+</html>
+
+<script>
+  // Hide blur after 1.5 seconds
+  setTimeout(() => {
+    document.getElementById("loader-blur").classList.add("hide");
+  }, 1500);
+</script>

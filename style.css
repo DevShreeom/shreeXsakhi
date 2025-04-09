@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 1000px;
+  background-image: url("images/bgp.jpeg");
+  background-position: center center;
+  overflow: hidden;
+}
+
+.paper {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-image: url("images/bg.jpeg");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+/* Glowing dreamy edge effect */
+.paper::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: -1;
+  background: inherit;
+  filter: blur(25px);
+  border-radius: 30px;
+  opacity: 0.6;
+}
+
+.paper.heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.paper.image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+
+.paper.image p {
+  font-size: 30px;
+}
+
+img {
+  max-height: 400px;
+  width: 100%;
+  user-select: none;
+  border-radius: 10px;
+}
+
+.paper.heart::after {
+  content: "";
+  background-image: url('https://cdn.pixabay.com/photo/2016/03/31/19/25/cartoon-1294994__340.png');
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+p {
+  font-family: 'Zeyada';
+  font-size: 50px;
+  color: rgb(0,0,100);
+  opacity: 0.75;
+  user-select: none;
+}
+
+#loader-blur {
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+#loader-blur.hide {
+  opacity: 0;
+  pointer-events: none;
+}
